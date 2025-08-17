@@ -3,6 +3,9 @@ import { es } from "@/lib/es";
 import withTimeout from "@/lib/timeout";
 import { ensureRedis, redis } from "@/lib/redis";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const INDEX = process.env.IMAGO_INDEX || "imago";
 const SUGGEST_TTL_SECONDS = Number(process.env.SUGGEST_TTL_SECONDS || 600);
 

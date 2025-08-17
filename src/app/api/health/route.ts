@@ -2,6 +2,9 @@ import { NextResponse } from "next/server";
 import { ensureRedis, redis } from "@/lib/redis";
 import { es } from "@/lib/es";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function GET() {
     const checks: Record<string, "UP" | "DOWN"> = {};
 

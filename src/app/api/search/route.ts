@@ -6,6 +6,9 @@ import { ensureRedis, redis } from "@/lib/redis";
 import { log } from "@/lib/logger";
 import { time } from "@/lib/timer";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 // Filters agg returns a map of named buckets.
 type FiltersBuckets = Record<string, { doc_count: number }>;
 type AggsByDbFilters = { buckets: FiltersBuckets };
