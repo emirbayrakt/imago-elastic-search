@@ -98,3 +98,16 @@ input[type="search"]::-webkit-search-results-decoration {
         transform: translateY(100%);
     }
 }
+
+/* Lock document scroll when modal is open */
+:root.no-scroll,
+:root.no-scroll body {
+    overflow: hidden;
+}
+
+/* Avoid layout shift: add the missing scrollbar width as right padding on desktops */
+@media (pointer: fine) {
+    :root.no-scroll {
+        padding-right: var(--sbw, 0px);
+    }
+}

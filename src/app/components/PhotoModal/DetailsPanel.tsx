@@ -34,7 +34,7 @@ export default function DetailsPanel({
     openImagePageUrl: string;
 }) {
     return (
-        <div className="md:col-span-2 flex min-h-0 flex-col border-l border-gray-200 md:overflow-y-auto nice-scroll overscroll-contain">
+        <div className="md:col-span-2 flex min-h-0 flex-col md:overflow-y-auto nice-scroll overscroll-contain">
             <div className="p-4 sm:p-5">
                 {description && (
                     <div className="mb-3">

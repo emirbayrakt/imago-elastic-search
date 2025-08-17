@@ -92,9 +92,11 @@ export default function PhotoModal({
     };
 
     return (
-        <ModalFrame open={open} onClose={onClose}>
-            <CloseButton onClose={onClose} />
-
+        <ModalFrame
+            open={open}
+            onClose={onClose}
+            floating={<CloseButton onClose={onClose} />}
+        >
             <TopBar
                 title={doc.title || "Untitled"}
                 dbLabel={dbLabel}
