@@ -10,8 +10,6 @@ import { ensureRedis, redis } from "@/lib/redis";
 import { log } from "@/lib/logger";
 import { time } from "@/lib/timer";
 
-const es = getEs();
-
 // Filters agg returns a map of named buckets.
 type FiltersBuckets = Record<string, { doc_count: number }>;
 type AggsByDbFilters = { buckets: FiltersBuckets };
@@ -285,6 +283,7 @@ export async function GET(req: NextRequest) {
                 },
             },
         };
+        const es = getEs();
 
         // ---- ES call with timing
         const { res: esResp, ms: esMs } = await time("es.search", async () =>
