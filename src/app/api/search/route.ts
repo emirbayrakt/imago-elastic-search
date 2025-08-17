@@ -1,13 +1,16 @@
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+export const runtime = "nodejs";
+
 import { NextRequest, NextResponse } from "next/server";
-import { es } from "@/lib/es";
+import { getEs } from "@/lib/es";
 import { normalizeHit, NormalizedDoc, ImagoHit } from "@/lib/normalize";
 import withTimeout from "@/lib/timeout";
 import { ensureRedis, redis } from "@/lib/redis";
 import { log } from "@/lib/logger";
 import { time } from "@/lib/timer";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+const es = getEs();
 
 // Filters agg returns a map of named buckets.
 type FiltersBuckets = Record<string, { doc_count: number }>;
