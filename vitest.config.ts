@@ -12,4 +12,8 @@ export default defineConfig({
         restoreMocks: true,
         clearMocks: true,
     },
+    esbuild: {
+        jsx: "automatic",
+        jsxImportSource: "react",
+    },
 });

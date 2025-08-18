@@ -46,7 +46,7 @@ export default function MediaView({
                         priority
                         placeholder="blur"
                         blurDataURL={blurSrc}
-                        onLoadingComplete={() => setLoaded(true)}
+                        onLoad={() => setLoaded(true)}
                         onError={onError}
                         className={[
                             "object-contain transition-opacity duration-300",

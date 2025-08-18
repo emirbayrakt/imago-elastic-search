@@ -97,7 +97,7 @@ export default function ResultCard({
                 sizes="(max-width: 768px) 100vw,
                (max-width: 1200px) 50vw,
                33vw"
-                onLoadingComplete={() => setLoaded(true)}
+                onLoad={() => setLoaded(true)}
                 onError={() => {
                     setErrored(true);
                     setLoaded(true);

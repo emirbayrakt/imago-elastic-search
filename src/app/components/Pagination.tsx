@@ -48,11 +48,11 @@ export default function Pagination({
 
     return (
         <nav
-            className="mt-6 flex items-center justify-center gap-1.5 mb-8"
+            className="mt-6 flex flex-wrap sm:flex-nowrap items-center justify-center gap-1.5 mb-8"
             aria-label="Pagination"
         >
             <button
-                className="inline-flex items-center gap-1 px-2 sm:px-3 py-1.5 border disabled:opacity-40"
+                className="hidden sm:inline-flex items-center gap-1 px-2 sm:px-3 py-1.5 border disabled:opacity-40"
                 onClick={() => go(page - 1)}
                 disabled={atFirst}
                 aria-label="Previous page"
@@ -87,7 +87,7 @@ export default function Pagination({
             )}
 
             <button
-                className="inline-flex items-center gap-1 px-2 sm:px-3 py-1.5 border disabled:opacity-40"
+                className="hidden sm:inline-flex items-center gap-1 px-2 sm:px-3 py-1.5 border disabled:opacity-40"
                 onClick={() => go(page + 1)}
                 disabled={atLast}
                 aria-label="Next page"
